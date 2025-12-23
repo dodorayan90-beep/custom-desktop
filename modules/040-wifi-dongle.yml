@@ -1,7 +1,7 @@
 snd-hda-macbookpro
 type: shell
 commands:
-apt-get install -y gcc linux-headers-amd64 make patch wget dkms git
+lpkg --unlock && apt-get update && apt-get install -y git build-essential dkms make gcc linux-headers-amd64 && lpkg --lock
 git clone https://github.com/davidsansome/snd-hda-macbookpro.git
 cd snd-hda-macbookpro
 sed -i "s/$(shell uname -r)/$(cat /usr/share/vanilla/kernel-version)/g" Makefile
