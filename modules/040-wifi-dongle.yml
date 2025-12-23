@@ -1,7 +1,6 @@
 snd-hda-macbookpro
 type: shell
 commands:
-apt-get install -y git dkms make libarchive-tools
 git clone https://github.com/davidsansome/snd-hda-macbookpro.git
 cd snd-hda-macbookpro
 sed -i "s/$(shell uname -r)/$(cat /usr/share/vanilla/kernel-version)/g" Makefile
